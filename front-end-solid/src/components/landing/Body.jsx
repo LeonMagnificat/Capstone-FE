@@ -4,7 +4,6 @@ import { styled } from "@mui/material/styles";
 import home from "../../icons/home.svg";
 import Register from "../register/Register.jsx";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 function Body() {
   const [openreg, setOpenreg] = useState(false);
@@ -37,7 +36,6 @@ function Body() {
     boxShadow: "none",
     textTransform: "capitalize",
     marginRight: "24px",
-    background: "rgb(224, 155, 45)",
     background: "linear-gradient(153deg, rgba(224,155,45,1) 0%, rgba(167,43,242,1) 34%, rgba(0,138,147,1) 67%, rgba(76,138,255,1) 100%)",
   });
 

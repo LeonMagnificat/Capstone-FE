@@ -10,10 +10,8 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-
 import { style, titleStyle } from "../login/login-style.jsx";
 import { styled } from "@mui/material/styles";
-import googleIcon from "../../icons/google.svg";
 
 export default function LoginModel(props) {
   const InputField = styled(TextField)({

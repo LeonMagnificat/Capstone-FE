@@ -1,6 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import { Box, Container, Grid, Typography, Button, Paper } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import logo from "../../icons/logo.svg";
 import home from "../../icons/homeIcon-active.svg";
 import group from "../../icons/group2.svg";
