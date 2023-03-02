@@ -34,9 +34,11 @@ function Body() {
     height: "68px",
     width: "169px",
     borderRadius: "15px",
+    boxShadow: "none",
     textTransform: "capitalize",
     marginRight: "24px",
-    background: "linear-gradient(90deg, rgba(224,155,45,1) 0%, rgba(167,43,242,1) 46%, rgba(0,138,147,1) 71%, rgba(76,150,255,1) 100%)",
+    background: "rgb(224, 155, 45)",
+    background: "linear-gradient(153deg, rgba(224,155,45,1) 0%, rgba(167,43,242,1) 34%, rgba(0,138,147,1) 67%, rgba(76,138,255,1) 100%)",
   });
 
   return (

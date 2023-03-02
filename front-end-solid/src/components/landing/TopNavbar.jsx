@@ -27,6 +27,7 @@ function TopNavbar() {
     borderRadius: "15px",
     textTransform: "capitalize",
     marginRight: "24px",
+    boxShadow: "none",
     backgroundColor: "black",
   });
   const SecondButton = styled(Button)({
@@ -36,6 +37,7 @@ function TopNavbar() {
     textTransform: "capitalize",
     borderColor: "black",
     color: "black",
+    boxShadow: "none",
   });
 
   return (
