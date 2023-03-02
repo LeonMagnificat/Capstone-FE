@@ -6,16 +6,12 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
+
 import { style, titleStyle } from "../login/login-style.jsx";
 import { styled } from "@mui/material/styles";
 import googleIcon from "../../icons/google.svg";
 
-export default function LoginModel() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export default function LoginModel(props) {
   const InputField = styled(TextField)({
     border: "none",
     borderRadius: "20px",
@@ -49,14 +45,11 @@ export default function LoginModel() {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleOpen}>
-        Register
-      </Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        open={open}
-        onClose={handleClose}
+        open={props.open}
+        onClose={props.handleClose}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
         slotProps={{
@@ -65,7 +58,7 @@ export default function LoginModel() {
           },
         }}
       >
-        <Fade in={open}>
+        <Fade in={props.open}>
           <Box sx={style}>
             <ModelTitles sx={titleStyle} variant="h3" gutterBottom>
               Register

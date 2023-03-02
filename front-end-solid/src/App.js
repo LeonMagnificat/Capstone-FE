@@ -1,12 +1,16 @@
 import "./App.css";
-
-import Landing from "./components/landing/landing.jsx";
+import Landing from "./components/landing/Landing.jsx";
+import { Routes, Route } from "react-router-dom";
+import Account from "./components/account/Account.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <Landing />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/account" element={<Account />} />
+      </Routes>
+    </>
   );
 }
 

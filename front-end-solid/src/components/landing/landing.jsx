@@ -1,12 +1,13 @@
 import React from "react";
-import LoginModel from "../login/login.jsx";
-import Register from "../register/Register.jsx";
+
+import TopNavbar from "./TopNavbar.jsx";
+import Body from "./Body.jsx";
 
 function Landing() {
   return (
     <div>
-      <LoginModel />
-      <Register />
+      <TopNavbar />
+      <Body />
     </div>
   );
 }
