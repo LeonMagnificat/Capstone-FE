@@ -1,13 +1,11 @@
-import logo from "./logo.svg";
 import "./App.css";
+
+import Landing from "./components/landing/landing.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>SOLID</p>
-      </header>
+      <Landing />
     </div>
   );
 }
