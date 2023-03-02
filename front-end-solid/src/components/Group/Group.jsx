@@ -5,6 +5,7 @@ import empty from "../../icons/empty01.svg";
 import add from "../../icons/add.svg";
 import CreateGroupModel from "./CreateGroupModel.jsx";
 import { useState } from "react";
+import GroupWithcontent from "./GroupWithcontent.jsx";
 
 const GroupBox = styled(Box)({
   height: "400px",
@@ -52,7 +53,7 @@ export default function EmptyGroup() {
           </Box>
         </Box>
       </GroupBox>
-      <GroupBox></GroupBox>
+      <GroupWithcontent />
       <CreateGroupModel open={open} handleClose={handleClose} />
     </Box>
   );
