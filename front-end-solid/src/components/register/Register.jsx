@@ -75,7 +75,7 @@ export default function LoginModel(props) {
               Google
             </GoogleButton>
             <MainButton variant="contained" size="large">
-              Sign In
+              Sign Up
             </MainButton>
           </Box>
         </Fade>

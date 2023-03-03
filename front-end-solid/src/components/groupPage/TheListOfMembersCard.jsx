@@ -38,25 +38,21 @@ export default function TheListOfMembersCard() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} columns={12}>
-        <Grid item xs={6}>
-          <GroupBox>
-            <Box sx={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "space-between", marginBlockEnd: "20px" }}>
-              <Box>
-                <Typography>Group Name (6)</Typography>
-              </Box>
-              <Box>
-                <AddButton variant="outlined" color="secondary" onClick={handleOpen}>
-                  <img src={addsm} alt="" />
-                </AddButton>
-              </Box>
-            </Box>
-            <GroupMemberCard />
-          </GroupBox>
-        </Grid>
-      </Grid>
+    <Grid item xs={6}>
+      <GroupBox>
+        <Box sx={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "space-between", marginBlockEnd: "20px" }}>
+          <Box>
+            <Typography>Group Name (6)</Typography>
+          </Box>
+          <Box>
+            <AddButton variant="outlined" color="secondary" onClick={handleOpen}>
+              <img src={addsm} alt="" />
+            </AddButton>
+          </Box>
+        </Box>
+        <GroupMemberCard />
+      </GroupBox>
       <CreateGroupModel open={open} handleClose={handleClose} />
-    </Box>
+    </Grid>
   );
 }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Typography, Box, Button } from "@mui/material";
+import { Typography, Box, Button, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import add from "../../icons/add.svg";
@@ -38,21 +38,26 @@ export default function GroupPageCards() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <GroupBox>
-        <Box sx={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "space-between" }}>
-          <Box>
-            <Typography>All Groups (23)</Typography>
+    <>
+      <Box sx={{ flexGrow: 1 }}>
+        <GroupBox>
+          <Box sx={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "space-between" }}>
+            <Box>
+              <Typography>All Groups (23)</Typography>
+            </Box>
+            <Box>
+              <AddButton variant="contained" onClick={handleOpen}>
+                <img className="mr-3" src={add} alt="" /> Create Group
+              </AddButton>
+            </Box>
           </Box>
-          <Box>
-            <AddButton variant="contained" onClick={handleOpen}>
-              <img className="mr-3" src={add} alt="" /> Create Group
-            </AddButton>
-          </Box>
-        </Box>
-      </GroupBox>
-      <TheListOfMembersCard />
-      <CreateGroupModel open={open} handleClose={handleClose} />
-    </Box>
+        </GroupBox>
+        <Grid container spacing={2} columns={12}>
+          <TheListOfMembersCard />
+        </Grid>
+
+        <CreateGroupModel open={open} handleClose={handleClose} />
+      </Box>
+    </>
   );
 }

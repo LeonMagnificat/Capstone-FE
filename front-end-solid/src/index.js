@@ -13,6 +13,12 @@ const theme = createTheme({
     secondary: {
       main: "#A62BF2",
     },
+    orange: {
+      main: "#E09B2D",
+    },
+    delete: {
+      main: "#D32B02",
+    },
   },
   typography: {
     fontFamily: "'Nunito', sans-serif;",

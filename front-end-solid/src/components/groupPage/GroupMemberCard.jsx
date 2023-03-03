@@ -4,6 +4,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
+import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import profile01 from "../../icons/profile01.svg";
 import profile02 from "../../icons/profile02.svg";
@@ -21,7 +23,11 @@ import profile13 from "../../icons/profile13.svg";
 import profile14 from "../../icons/profile14.svg";
 import profile15 from "../../icons/profile15.svg";
 import profile16 from "../../icons/profile16.svg";
+import update from "../../icons/update.svg";
+import deleteIcon from "../../icons/delete.svg";
 import MemberContributionCard from "../groupPage/MemberContributionCard.jsx";
+import TotalContributionMemberCard from "../groupPage/TotalContributionMemberCard.jsx";
+import addsm from "../../icons/addsm.svg";
 
 export default function GroupMemberCard() {
   const profiles = [profile01, profile02, profile03, profile04, profile05, profile06, profile07, profile08, profile09, profile10, profile11, profile12, profile13, profile14, profile15, profile16];
@@ -32,20 +38,39 @@ export default function GroupMemberCard() {
     boxShadow: "none",
     borderRadius: "15px !important",
   });
+  const AccordionContent = styled(AccordionDetails)({
+    maxHeight: "400px",
+    overflow: "scroll",
+  });
 
-  const AccordionMemberBox = styled(AccordionSummary)({
-    display: "flex",
-    alignItems: "center !important",
+  const TopButton = styled(Button)({
+    height: "35px",
+    width: "35px",
+    borderRadius: "50px",
+    textTransform: "capitalize",
+    boxShadow: "none",
+    minWidth: "0",
+    marginRight: "10px",
   });
 
   return (
     <div>
-      <AccordionBox>
-        <AccordionMemberBox expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-          <img className="avatar-profile" src={randomProfile} alt="" />
-          <Typography sx={{ marginBlockStart: "8px", marginInlineStart: "10px" }}>Member Name </Typography>
-        </AccordionMemberBox>
-        <AccordionDetails>
+      <AccordionBox sx={{ justifyContent: "space-between" }}>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+          <Box sx={{ display: "flex", marginInlineEnd: "55px" }}>
+            <img className="avatar-profile" src={randomProfile} alt="" />
+            <Typography sx={{ marginBlockStart: "8px", marginInlineStart: "10px" }}>Member Name </Typography>
+          </Box>
+          <Box>
+            <TopButton variant="outlined" color="orange">
+              <img src={update} alt="" />
+            </TopButton>
+            <TopButton variant="outlined" color="delete">
+              <img src={deleteIcon} alt="" />
+            </TopButton>
+          </Box>
+        </AccordionSummary>
+        <AccordionContent>
           <MemberContributionCard />
           <MemberContributionCard />
           <MemberContributionCard />
@@ -60,7 +85,18 @@ export default function GroupMemberCard() {
           <MemberContributionCard />
           <MemberContributionCard />
           <MemberContributionCard />
-        </AccordionDetails>
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <MemberContributionCard />
+          <TotalContributionMemberCard />
+        </AccordionContent>
       </AccordionBox>
     </div>
   );
